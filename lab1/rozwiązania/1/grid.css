@@ -1,0 +1,80 @@
+p {
+	color: black;
+}
+
+
+.grey-blue-table{
+	width: 800px;
+	height: 300px;
+
+}
+.first-row {
+	background-color: #4169E1;
+}
+
+.blue-row {
+	background-color: #B0C4DE;
+}
+
+.light-blue-row {
+	background-color: #E6E6FA;
+}
+
+.second-table {
+	width: 760px;
+	height: 180px;
+  	background-color: black;
+}
+
+.grey-cells {
+	background-color: #696969;
+
+}
+
+.light-grey-cells{
+	background-color: #D3D3D3;
+	
+}
+
+.text-and-photos{
+	width: 780px;
+	height: 800px;
+}
+
+.img1 {
+	float: left;
+}
+
+.img2{
+	float: right;
+}
+
+.p1 {
+	background-color: #2F4F4F;
+}
+
+.p2 {
+	background-color: #00CED1;
+}
+
+.p3 {
+	background-color: #8B008B;
+}
+
+.p4 {
+	background-color: #ADD8E6;
+}
+
+.p5 {
+	background-color: #90EE90; 
+}
+
+.european-countries{
+	float: left;
+	background-color: blue;
+}
+
+.asian-countries{
+	float: left;
+	background-color: red;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<form action="done.html" method="get">
+		nr konta:<br>
+		<input name="account number" type="text"><br>
+		imię:<br>
+		<input name="first-name" type="text"><br>
+		nazwisko:<br>
+		<input name="last-name" type="text"><br>
+		e-mail:<br>
+		<input name="email-address" type="text"><br>
+		adres:<br>
+		<input name="home-address" type="text"><br>
+		kod pocztowy:<br>
+		<input name="postal-code" type="text"><br>
+		miasto:<br>
+		<input name="city" type="text" list="cities"><br>
+		<datalist id="cities">
+			<option>Warszawa</option>
+			<option>Kraków</option>
+			<option>Łódź</option>
+			<option>Wrocław</option>
+			<option>Poznań</option>
+			<option>Gdańsk</option>
+			<option>Szczecin</option>
+			<option>Bydgoszcz</option>
+			<option>Lublin</option>
+			<option>Białystok</option>
+		</datalist>
+		kwota przelewu:<br>
+		<input name="transfer-amount" type="text"><br>
+		data przelewu:<br>
+		<input name="date" type="text"><br>
+		<input type="submit" value="wyślij">
+	</form>
+</body>
+</html>

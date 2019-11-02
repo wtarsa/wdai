@@ -1,0 +1,25 @@
+.wrapper{
+	display: grid;
+	grid-template-rows: 50px 50px 50px;
+	grid-template-columns: 50px 50px 50px;
+	border-spacing: 2px;
+}
+
+div.wrapper div{
+	background-color: #D4D4D4;
+}
+
+.item1{
+	grid-column-start: 1;
+	grid-column-end: 3;
+}
+
+.item3{
+	grid-row-start: 2;
+	grid-row-end: 4;
+}
+
+.item4{
+	grid-column-start: 2;
+	grid-column-end: 4;
+}

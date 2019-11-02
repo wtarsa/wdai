@@ -1,0 +1,420 @@
+@media screen and (min-width: 940px){
+
+body{
+	max-width: 100%
+}
+
+/* fonts */
+h1, h3, h4, a, .footer, li, h2, input, p, div, h5{
+	font-family: 'monospace';
+	text-decoration: none;
+	font-size: 0.9vw;
+	color: #3c3947;
+}
+
+h1 {
+  font-size: 3vw; 
+}
+
+h2 {
+  font-size: 2.4vw; 
+}
+
+h3 {
+  font-size: 2vw; 
+}
+
+h4 {
+  font-size: 1.8vw; 
+}
+
+h5 {
+  font-size: 1.4vw; 
+}
+
+h6 {
+  font-size: 1.2vw; 
+}
+
+
+.container{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: 10vh 100vh 100vh 100vh 100vh 100vh 100vh 10vh;
+	grid-gap: 10px;
+
+	background-color: #edf0e9;
+	font-family: monospace;
+}
+
+.photo, .ingr, .make, .contact, footer{
+	background-color: #9992a3;
+}
+
+nav div img{
+	height: 100%;
+}
+
+nav{
+	grid-area: 1/1/2/4;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: 10vh;
+	
+}
+
+nav div{
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+nav .logo{
+	grid-area: 1/1/2/2;
+	
+}
+
+nav .intro{
+	grid-area: 1/2/2/3;
+}
+
+nav .recipes{
+	grid-area: 1/3/2/4;
+}
+
+nav .contact-button{
+	grid-area: 1/4/2/5;
+}
+
+header{
+	grid-area: 2/1/3/4;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	
+}
+
+.recipe-list{
+	grid-area: 3/1/4/4;
+	display: grid;
+	justify-content: center;
+	align-items: center;
+}
+
+.photo1{
+	grid-area: 4/1/5/2;
+	background-image: url(2.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain;
+}	
+
+.ingr, .make{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.ingr1{
+	grid-area: 4/2/5/3;
+}
+
+.make1{
+	grid-area: 4/3/5/4;
+}
+
+.ingr2{
+	grid-area: 5/2/6/3;
+}
+
+.make2{
+	grid-area: 5/3/6/4;
+}
+
+.photo2{
+	grid-area: 5/1/6/2;
+	background-image: url(3.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain;
+}
+
+
+.photo3{
+	grid-area: 6/1/7/2;
+	background-image: url(4.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain;
+}
+
+.ingr3{
+	grid-area: 6/2/7/3;
+}
+
+.make3{
+	grid-area: 6/3/7/4;
+}
+
+.contact{
+	grid-area: 7/1/8/4;
+}
+
+footer{
+	grid-area: 8/1/9/4;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.mail-container{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: 100px 100px 100px 100px 100px 30px 50px;
+	grid-gap: 10px;
+	border-radius: 5px;
+	font-family: 'Times New Roman', cursive;
+}
+
+.new-message{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	grid-area: 1 / 1 / 2 / 4;
+}
+
+.message-details{
+	grid-column-start: 1;
+	grid-column-end: 2;
+}
+
+input{
+	font-size: 30px;
+	grid-column-start: 2;
+	grid-column-end: 4;
+}
+
+.send-copy{
+	grid-area: 6 / 1 / 7 / 4;
+}
+
+.send{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	grid-area: 7 / 1 / 8 / 4;
+}
+}
+
+@media screen and (max-width: 940px){
+	body{
+	max-width: 100%
+}
+
+/* fonts */
+h1, h3, h4, a, .footer, li, h2, input, p, div, h5{
+	font-family: 'monospace';
+	text-decoration: none;
+	font-size: 0.9vw;
+	color: #3c3947;
+}
+
+h1 {
+  font-size: 3vw; 
+}
+
+h2 {
+  font-size: 2.4vw; 
+}
+
+h3 {
+  font-size: 2vw; 
+}
+
+h4 {
+  font-size: 1.8vw; 
+}
+
+h5 {
+  font-size: 1.4vw; 
+}
+
+h6 {
+  font-size: 1.2vw; 
+}
+
+
+.container{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 20vh 100vh 100vh 50vh 50vh 50vh 50vh 50vh 50vh 100vh 100vh 10vh;
+	grid-gap: 10px;
+
+	background-color: #edf0e9;
+	font-family: monospace;
+}
+
+.photo, .ingr, .make, .contact, footer{
+	background-color: #9992a3;
+}
+
+nav div img{
+	height: 100%;
+}
+
+nav{
+	grid-area: 1/1/2/3;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 10vh 10vh;
+	
+}
+
+nav div{
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+nav .logo{
+	grid-area: 1/1/2/2;
+	
+}
+
+nav .intro{
+	grid-area: 1/2/2/3;
+}
+
+nav .recipes{
+	grid-area: 2/1/3/2;
+}
+
+nav .contact-button{
+	grid-area: 2/2/3/3;
+}
+
+header{
+	grid-area: 2/1/3/4;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	
+}
+
+.recipe-list{
+	grid-area: 3/1/4/4;
+	display: grid;
+	justify-content: center;
+	align-items: center;
+}
+
+.photo1{
+	grid-area: 4/1/5/2;
+	background-image: url(2.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain;
+}	
+
+.ingr, .make{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.ingr1{
+	grid-area: 4/2/5/3;
+}
+
+.make1{
+	grid-area: 4/3/5/4;
+}
+
+.ingr2{
+	grid-area: 5/2/6/3;
+}
+
+.make2{
+	grid-area: 5/3/6/4;
+}
+
+.photo2{
+	grid-area: 5/1/6/2;
+	background-image: url(3.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain;
+}
+
+
+.photo3{
+	grid-area: 6/1/7/2;
+	background-image: url(4.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain;
+}
+
+.ingr3{
+	grid-area: 6/2/7/3;
+}
+
+.make3{
+	grid-area: 6/3/7/4;
+}
+
+.contact{
+	grid-area: 7/1/8/4;
+}
+
+footer{
+	grid-area: 8/1/9/4;
+}
+
+.mail-container{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: 100px 100px 100px 100px 100px 30px 50px;
+	grid-gap: 10px;
+	border-radius: 5px;
+	font-family: 'Times New Roman', cursive;
+}
+
+.new-message{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	grid-area: 1 / 1 / 2 / 4;
+}
+
+.message-details{
+	grid-column-start: 1;
+	grid-column-end: 2;
+}
+
+input{
+	font-size: 30px;
+	grid-column-start: 2;
+	grid-column-end: 4;
+}
+
+.send-copy{
+	grid-area: 6 / 1 / 7 / 4;
+}
+
+.send{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	grid-area: 7 / 1 / 8 / 4;
+}
+
+}

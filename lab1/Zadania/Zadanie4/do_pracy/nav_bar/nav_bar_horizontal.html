@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="utf-8">
+		<title>horizontal navbar </title>
+		<style type="text/css">
+			 
+			.flex-box{
+				border-left: 1px dashed gray;
+				margin: 0;
+				padding: 0;
+			}
+
+			body {
+				font: 62.5% Verdana, Arial, Helvetica, sans-serif;
+				margin: 0;
+				padding: 20px;
+				
+			}
+			
+			body ul{
+				list-style-type: none;
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+			}
+
+			body ul li{
+				display: flex;
+				border-top: 1px dashed gray;
+				border-right: 1px dashed gray;
+				border-bottom: 1px dashed gray;
+				background-image: url(images/link.png);
+				background-repeat: no-repeat;
+				background-position: left;
+				width: 180px;
+				height: 32px;	
+				justify-content: flex-start;	
+				background-color: #E7E7E7;
+			}
+
+			body ul .offer{
+				background-image: url(images/bg_here.png);
+				background-repeat: no-repeat;
+				background-position: left;
+				background-color: white;
+				font-weight: bold;
+			}
+
+			body ul .main{
+				background-image: url(images/home.png);
+				background-repeat: no-repeat;
+				background-position: left;
+			}
+
+			body ul .main:hover,
+			body ul .quiz:hover,
+			body ul .experts:hover,
+			body ul .projects:hover,
+			body ul .horoscopes:hover{
+				background-image: url(images/go.png);
+				background-repeat: no-repeat;
+				background-position: left;
+				background-color: #B2F511;
+			}
+
+			body ul .offer a:hover{
+				color: #B2F511;
+			}
+
+			body ul li a{
+				padding: 10px;
+				margin-left: 30px;
+				font-size: 12px;
+				color: black;
+				text-decoration: none;
+				text-transform: uppercase;
+
+			
+			}
+
+		
+		</style>
+	</head>
+	<body>
+  		<ul class="flex-box">
+    		<li class="main"><a href="/index.html"> HOME </a></li>
+    		<li class="offer"><a href="/features/"> FEATURES </a></li>
+   			<li class="experts"><a href="/experts/"> EXPERTS </a></li>
+    		<li class="quiz"><a href="/quiz/"> QUIZ</a></li>
+    		<li class="projects"><a href="/projects/"> PROJECTS </a></li>
+    		<li class="horoscopes"><a href="/horoscopes/"> HOROSCOPES </a></li>
+  		</ul>
+	</body>
+</html>
