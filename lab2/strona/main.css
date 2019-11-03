@@ -727,7 +727,7 @@ footer{
 .mail-container{
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: 12vh 14vh 14vh 14vh 14vh 14vh 2vh 12vh 12vh;
+	grid-template-rows: 12vh 14vh 4vh 10vh 4vh 10vh 4vh 10vh 4vh 10vh 2vh 12vh 12vh;
 	grid-gap: 10px;
 	border-radius: 5px;
 	font-family: 'Times New Roman', cursive;
@@ -740,35 +740,35 @@ footer{
 }
 
 .message-details-1{
-	grid-area: 3/1/4/2;
+	grid-area: 3/1/4/4;
 }
 
 .message-details-2{
-	grid-area: 4/1/5/2;
+	grid-area: 5/1/6/4;
 }
 
 .message-details-3{
-	grid-area: 5/1/6/2;
+	grid-area: 7/1/8/4;
 }
 
 .message-details-4{
-	grid-area: 6/1/7/2;
+	grid-area: 9/1/10/4;
 }
 
 .in1{
-	grid-area: 3/2/4/4;
+	grid-area: 4/1/5/4;
 }
 
 .in2{
-	grid-area: 4/2/5/4;
+	grid-area: 6/1/7/4;
 }
 
 .in3{
-	grid-area: 5/2/6/4;
+	grid-area: 8/1/9/4;
 }
 
 .in4{
-	grid-area: 6/2/7/4;
+	grid-area: 10/1/11/4;
 }
 
 input{
@@ -778,14 +778,14 @@ input{
 }
 
 .send-copy{
-	grid-area: 7 / 1 / 8 / 4;
+	grid-area: 11 / 1 / 12 / 4;
 }
 
 .send{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	grid-area: 8 / 1 / 9 / 4;
+	grid-area: 12 / 1 / 13 / 4;
 }
 
 }
