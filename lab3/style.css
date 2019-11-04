@@ -1,0 +1,27 @@
+#blok1{
+	display: flex;
+	border: 2px black solid;
+	width: 200px;
+	height: 200px;
+	background-color: blue;
+	align-items: center;
+	justify-content: center;
+} 
+
+#blok2{
+	display: flex;
+	width: 100px;
+	height: 100px;
+	background-color: red;
+	align-items: center;
+	justify-content: center;
+}
+
+#blok3{
+	display: flex;
+	width: 50px;
+	height: 50px;
+	background-color: yellow;
+	justify-content: center;
+	align-items: center;
+}

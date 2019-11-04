@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>kwadraty</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div id="blok1">1
+		<div id="blok2">2
+			<div id="blok3">
+				3
+			</div>
+		</div>
+	</div>
+	<button id="ssp">StopStratPropagation</button>
+	<button>RemoveListener</button>
+	<button>AddListener</button>
+
+	<script type="text/javascript">
+
+		var counter1 = 0;
+		var counter2 = 0;
+		var counter3 = 0;
+
+		var a = document.getElementById('blok1').onclick = function(){			
+			alert('Nacisnąłeś niebieski o wartości 1');
+			counter1++;
+		}
+
+		document.getElementById('blok2').onclick = function(){
+			if(counter2){
+				alert('Nacisnąłeś czerwony o wartości 2');
+				counter2++;
+			}
+		}
+
+		document.getElementById('blok3').onclick = function(){
+			if(counter3){
+				alert('Nacisnąłeś żółty o wartości 5');
+				counter3++;
+			}
+		}
+
+		var sspButton = document.getElementById('ssp');
+		sspButton.RemoveListener('click', a, false);
+
+	</script>
+
+</body>
+</html>
