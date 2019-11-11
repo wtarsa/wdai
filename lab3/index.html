@@ -29,20 +29,21 @@
 		}
 
 		document.getElementById('blok2').onclick = function(){
-			if(counter2){
+			if(counter2 < 30){
 				alert('Nacisnąłeś czerwony o wartości 2');
 				counter2++;
 			}
 		}
 
 		document.getElementById('blok3').onclick = function(){
-			if(counter3){
+			if(counter3 < 50){
 				alert('Nacisnąłeś żółty o wartości 5');
 				counter3++;
 			}
 		}
 
 		var sspButton = document.getElementById('ssp');
+		sspButton.AddListener('click', a);
 		sspButton.RemoveListener('click', a, false);
 
 	</script>
