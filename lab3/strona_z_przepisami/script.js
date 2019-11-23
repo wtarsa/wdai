@@ -5,6 +5,9 @@ var p3 = document.getElementById('p3');
 p1.addEventListener('click', showRecipe);
 p2.addEventListener('click', showRecipe);
 p3.addEventListener('click', showRecipe);
+document.getElementById('p1c').addEventListener('click', hideAllRecipes);
+document.getElementById('p2c').addEventListener('click', hideAllRecipes);
+document.getElementById('p3c').addEventListener('click', hideAllRecipes);
 
 var recipe_form = document.getElementById('recipe_form');
 var add_recipe_button = document.getElementById('add-recipe-button');
@@ -25,6 +28,7 @@ recipe_submit_button.addEventListener('click', function(e){
 	console.log(recipeName);
 	console.log(inredients);
 	console.log(preparationSteps);
+	hideAddRecipeForm();
 			
 });
 
@@ -41,9 +45,9 @@ function hideAllRecipes(){
 function showRecipe(event){
 	hideAllRecipes();
 	var a = event.target.getAttribute('photo_id')
-	document.getElementById("p" + a + "c").setAttribute("class", "photo");
-	document.getElementById("i" + a).setAttribute("class", "ingr");
-	document.getElementById("m" + a).setAttribute("class", "make");
+	document.getElementById("p" + a + "c").setAttribute("class", "photo hvr-wobble-to-top-right");
+	document.getElementById("i" + a).setAttribute("class", "ingr hvr-wobble-to-top-right");
+	document.getElementById("m" + a).setAttribute("class", "make hvr-wobble-to-top-right");
 }
 
 function showAddRecipeForm(event){
@@ -74,13 +78,14 @@ function readURL(input) {
             img.setAttribute('photo_id', pid);
             img.addEventListener('click', showRecipe);
             recipeHeadersContainer.appendChild(img);
+            img.addEventListener('click', function(){console.log('triggered')}) // dev
             /*zdjęcie w wyświetlaniu*/
             var img2 = document.createElement("img");
             img2.setAttribute('src', e.target.result);
             img2.setAttribute('id', 'p'+pid+'c');
             img2.setAttribute('class', 'photo d-none');
             recipesBox.appendChild(img2);
-            img.addEventListener('click', function(){console.log('triggered')}) // dev
+            img2.addEventListener('click', hideAllRecipes);
             /*skladniki*/
    			var ingr = document.createElement("div");
            	ingr.setAttribute('class', 'ingr d-none');
@@ -104,7 +109,7 @@ function readURL(input) {
             var preparationSteps = document.querySelector('.preparation-steps').value;
             p2.innerHTML = preparationSteps;
             make.appendChild(p2);
-            //make.appendChild()
+      
             recipesBox.appendChild(make);
         }
 
@@ -116,3 +121,4 @@ fileInput.addEventListener('change', function(){
 	console.log('change')
     readURL(this);
 });
+
