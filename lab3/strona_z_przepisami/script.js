@@ -18,13 +18,14 @@ var fileInput = document.querySelector('input[type="file"]')
 
 recipe_form.addEventListener('click', function(e){e.stopPropagation()});
 recipe_submit_button.addEventListener('click', function(e){
-    console.log('submit')
-    var recipeName = document.querySelector('.recipe-name').value
-    var inredients = document.querySelector('.ingredients').value
-    var preparationSteps = document.querySelector('.preparation-steps').value
-	console.log(recipeName)
-	console.log(inredients)
-	console.log(preparationSteps)
+    console.log('submit');
+    var recipeName = document.querySelector('.recipe-name').value;
+    var inredients = document.querySelector('.ingredients').value;
+    var preparationSteps = document.querySelector('.preparation-steps').value;
+	console.log(recipeName);
+	console.log(inredients);
+	console.log(preparationSteps);
+			
 });
 
 function hideAllRecipes(){
@@ -60,14 +61,51 @@ function readURL(input) {
 
         reader.onload = function (e) {
             recipeHeadersContainer = document.getElementsByClassName('recipe-box-headers')[0]
+            recipesBox = document.getElementsByClassName('recipe-box-recipes')[0];
             // document.getElementsByClassName('recipe-box-headers')[0].appendChild(img)
             // <img src=​"recipes_logo.png">​
+           
+            /*miniatura z listy*/
             var img = document.createElement("img");
+            img.setAttribute('class', 'photo');
             img.setAttribute('src', e.target.result);
+            var pid = parseInt(document.querySelectorAll('[photo_id]').length)+1;
+            img.setAttribute('id', 'p'+pid);
+            img.setAttribute('photo_id', pid);
+            img.addEventListener('click', showRecipe);
             recipeHeadersContainer.appendChild(img);
-
-            // img.addEventListener('click', showRecipe)
-            img.addEventListener('click', function(){console.log('triggered')})
+            /*zdjęcie w wyświetlaniu*/
+            var img2 = document.createElement("img");
+            img2.setAttribute('src', e.target.result);
+            img2.setAttribute('id', 'p'+pid+'c');
+            img2.setAttribute('class', 'photo d-none');
+            recipesBox.appendChild(img2);
+            img.addEventListener('click', function(){console.log('triggered')}) // dev
+            /*skladniki*/
+   			var ingr = document.createElement("div");
+           	ingr.setAttribute('class', 'ingr d-none');
+            ingr.setAttribute('id', 'i'+pid);
+            var s = document.createElement("h3");
+            s.innerHTML = "Składniki:";
+            ingr.appendChild(s);
+            var p1 = document.createElement('p');
+            var inredients = document.querySelector('.ingredients').value;
+            p1.innerHTML = inredients;
+            ingr.appendChild(p1);
+    		recipesBox.appendChild(ingr);
+            /*wykonanie*/
+            var make = document.createElement("div");
+            make.setAttribute('class', 'make d-none');
+            make.setAttribute('id', 'm'+pid);
+            var m = document.createElement("h3");
+            m.innerHTML = "Metoda wykonania:";
+            make.appendChild(m);
+            var p2 = document.createElement('p');
+            var preparationSteps = document.querySelector('.preparation-steps').value;
+            p2.innerHTML = preparationSteps;
+            make.appendChild(p2);
+            //make.appendChild()
+            recipesBox.appendChild(make);
         }
 
         reader.readAsDataURL(input.files[0]);
