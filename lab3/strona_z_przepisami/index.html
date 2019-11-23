@@ -15,23 +15,24 @@
 			<a href="#recipes"><div class="recipes"><h4>przepisy</h4></div></a>
 			<a href="#con"><div class="contact-button"><h4>kontakt</h4></div></a>
 		</nav>
-		<a href="#intro"> 
+		<a href="#intro">
 			<div class="add-recipe-button" id="add-recipe-button">
 				<p>dodaj przepis</p>
 			</div>
 		</a>
-		
+
 		<form class="add-recipe d-none" id="recipe_form">
 			<h4 class="ar1">Dodaj nowy przepis!</h4>
 			<h5 class="tf1 tf">Nazwa przepisu:</h5>
-			<input type="text" name="" class="if1 if">
+			<input type="text" name="" class="if1 if recipe-name">
 			<h5 class="tf2 tf">Składniki:</h5>
-			<input type="text" name="" class="if2 if">
+			<input type="text" name="" class="if2 if ingredients">
 			<h5 class="tf3 tf">Sposób wykonania:</h5>
-			<input type="text" name="" class="if3 if">
+			<input type="text" name="" class="if3 if preparation-steps">
 			<h5 class="tf4 tf">Dodaj zdjęcie:</h5>
-			<button type="button" class="if4 if">załącz...</button> 
-			<button type="button" class="if5 if">wyślij</button> 
+			<input type="file">
+			<button type="button" class="add-attachment if4 if">załącz...</button>
+			<button type="button" class="submit-form if5 if">wyślij</button>
 		</form>
 
 		<header id="intro">
@@ -49,13 +50,16 @@
 			<h1>Lista przepisów </h1>
 		</div>
 		<!-- nagłowki -->
-		<div class="recipe-box-headers"> 
-			<div class="photo" style="background-image: url(2.png);" id="p1" photo_id='1' ></div>
-			<div class="photo" style="background-image: url(3.png);" id="p2" photo_id='2'></div>
-			<div class="photo" style="background-image: url(4.png);" id="p3" photo_id='3'></div>
+		<div class="recipe-box-headers">
+			<!--<div class="photo" style="background-image: url(2.png);" id="p1" photo_id='1' ></div>-->
+			<!--<div class="photo" style="background-image: url(3.png);" id="p2" photo_id='2'></div>-->
+			<!--<div class="photo" style="background-image: url(4.png);" id="p3" photo_id='3'></div>-->
+			<img class="photo" src=2.png id="p1" photo_id='1' ></img>
+			<img class="photo" src=3.png id="p2" photo_id='2'></img>
+			<img class="photo" src=4.png id="p3" photo_id='3'></img>
 		</div>
 		<!-- przepisy -->
-		<div class="recipe-box-recipes"> 
+		<div class="recipe-box-recipes">
 			<div class="photo d-none" style="background-image: url(2.png);" id="p1c" ></div>
 			<div class="ingr d-none" id="i1">
 				<h3>Składniki:</h3>
@@ -84,7 +88,7 @@
 					<li>Przygotuj masę śmietanową. Żelatynę zalej 1/4 szklanki zimnej wody. Gdy napęcznieje rozpuść w kąpieli wodnej, przestudź. Kremówkę ubij na sztywno z cukrem pudrem i wymieszaj delikatnie z rozpuszczoną żelatyną. Gotową masę wyłóż na wierzch ciasta. Wyrównaj powierzchnię długim nożem. Całość udekoruj sypkim cappuccino i odstaw na kilka godzin do lodówki.</li>
 				</ol>
 			</div>
-				
+
 			<div class="photo d-none" style="background-image: url(3.png);" id="p2c"></div>
 			<div class="ingr d-none" id="i2">
 				<h3>Składniki:</h3>
@@ -139,7 +143,7 @@
 				</ol>
 			</div>
 		</div>
-		
+
 
 		<div class="contact" id="con">
 			<form class="mail-container">
@@ -152,7 +156,7 @@
 				<input type="e-mail" name="e-mail" class="in3 in">
 				<div class="message-details-4"><h4>Treść wiadomości:</h4></div>
 				<input type="text" name="" class="in4 in ">
-				<div class="send-copy">	
+				<div class="send-copy">
 				</div>
 				<div class="send">
 				<input type="submit" name="button" value="Wyślij">
