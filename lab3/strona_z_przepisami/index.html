@@ -4,6 +4,8 @@
 	<meta charset="utf-8" name="viewport" content="width=device-width", initial-scale=1.0>
 	<title>Przepisy</title>
 	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="add-recipe-form.css">
+
 </head>
 <body>
 	<div class="container">
@@ -13,6 +15,25 @@
 			<a href="#recipes"><div class="recipes"><h4>przepisy</h4></div></a>
 			<a href="#con"><div class="contact-button"><h4>kontakt</h4></div></a>
 		</nav>
+		<a href="#intro"> 
+			<div class="add-recipe-button" id="add-recipe-button">
+				<p>dodaj przepis</p>
+			</div>
+		</a>
+		
+		<form class="add-recipe d-none" id="recipe_form">
+			<h4 class="ar1">Dodaj nowy przepis!</h4>
+			<h5 class="tf1 tf">Nazwa przepisu:</h5>
+			<input type="text" name="" class="if1 if">
+			<h5 class="tf2 tf">Składniki:</h5>
+			<input type="text" name="" class="if2 if">
+			<h5 class="tf3 tf">Sposób wykonania:</h5>
+			<input type="text" name="" class="if3 if">
+			<h5 class="tf4 tf">Dodaj zdjęcie:</h5>
+			<button type="button" class="if4 if">załącz...</button> 
+			<button type="button" class="if5 if">wyślij</button> 
+		</form>
+
 		<header id="intro">
 			<h1> Witam na mojej stronie. </h1>
 			<h5> Możesz tutaj znaleźć kilka przepisów na pyszne wypieki.</h5>
@@ -27,115 +48,121 @@
 		<div class="recipe-list" id="recipes">
 			<h1>Lista przepisów </h1>
 		</div>
-
-		<div class="photo1 photo"></div>
-		<div class="ingr1 ingr">
-			<h3>Składniki:</h3>
-			<ul>
-				<li>200g masła</li>
-				<li>200g mąki</li>
-				<li>100g cukru</li>
-				<li>100 jogurtu naturalnego</li>
-				<li>2 duże jajka</li>
-				<li>2 łyżki kakao</li>
-			
-				<li>1 łyżka cukru</li>
-				<li>50 ml likieru kawowego</li>
-				<li>250g serka mascarpone</li>
-				<li>1 szklanka śmietanki 30%</li>
-				<li>10g żelatyny</li>
-				<li>60g kawy cappuccino w proszku</li>
-			</ul>
+		<!-- nagłowki -->
+		<div class="recipe-box-headers"> 
+			<div class="photo" style="background-image: url(2.png);" id="p1" photo_id='1' ></div>
+			<div class="photo" style="background-image: url(3.png);" id="p2" photo_id='2'></div>
+			<div class="photo" style="background-image: url(4.png);" id="p3" photo_id='3'></div>
 		</div>
-		<div class="make1 make">
-			<h3>Sposób wykonania:</h3>
-			<ol>
-				<li>Masło rozpuść w rondelku, przestudź, wymieszaj z jogurtem i roztrzepanymi jajkami. W misce wymieszaj mąkę, sodę, kakao i cukier. Do sypkich składników wlej płynne i wymieszaj mikserem.</li>
-				<li>Dno formy o wymiarach 20 x 20 cm wyłóż papierem do pieczenia. Ciasto przełóż do formy, wyrównaj. Wstaw do nagrzanego piekarnika i piecz w 180 °C około 25 minut. Wystudź i przekrój na dwa blaty.</li>
-				<li>Przygotuj poncz. Kawę rozpuść w szklance gorącej, przegotowanej wody. Wymieszaj z cukrem i likierem.</li>
-				<li>Jeden blat ciasta ułóż ponownie w formie. Skrop połową ponczu. Na cieście rozprowadź masę cappucino i przykryj drugim blatem ciasta. Ponownie skrop ponczem.</li>
-				<li>Przygotuj masę śmietanową. Żelatynę zalej 1/4 szklanki zimnej wody. Gdy napęcznieje rozpuść w kąpieli wodnej, przestudź. Kremówkę ubij na sztywno z cukrem pudrem i wymieszaj delikatnie z rozpuszczoną żelatyną. Gotową masę wyłóż na wierzch ciasta. Wyrównaj powierzchnię długim nożem. Całość udekoruj sypkim cappuccino i odstaw na kilka godzin do lodówki.</li>
-
-			</ol>
+		<!-- przepisy -->
+		<div class="recipe-box-recipes"> 
+			<div class="photo d-none" style="background-image: url(2.png);" id="p1c" ></div>
+			<div class="ingr d-none" id="i1">
+				<h3>Składniki:</h3>
+				<ul>
+					<li>200g masła</li>
+					<li>200g mąki</li>
+					<li>100g cukru</li>
+					<li>100 jogurtu naturalnego</li>
+					<li>2 duże jajka</li>
+					<li>2 łyżki kakao</li>
+					<li>1 łyżka cukru</li>
+					<li>50 ml likieru kawowego</li>
+					<li>250g serka mascarpone</li>
+					<li>1 szklanka śmietanki 30%</li>
+					<li>10g żelatyny</li>
+					<li>60g kawy cappuccino w proszku</li>
+				</ul>
+			</div>
+			<div class="make d-none" id="m1">
+				<h3>Sposób wykonania:</h3>
+				<ol>
+					<li>Masło rozpuść w rondelku, przestudź, wymieszaj z jogurtem i  oztrzepanymi jajkami. W misce wymieszaj mąkę, sodę, kakao i cukier. Do sypkich składników wlej płynne i wymieszaj mikserem.</li>
+					<li>Dno formy o wymiarach 20 x 20 cm wyłóż papierem do pieczenia. Ciasto przełóż do formy, wyrównaj. Wstaw do nagrzanego piekarnika i piecz w 180 °C około 25 minut. Wystudź i przekrój na dwa blaty.</li>
+					<li>Przygotuj poncz. Kawę rozpuść w szklance gorącej, przegotowanej wody. Wymieszaj z cukrem i likierem.</li>
+					<li>Jeden blat ciasta ułóż ponownie w formie. Skrop połową ponczu. Na cieście rozprowadź masę cappucino i przykryj drugim blatem ciasta. Ponownie skrop ponczem.</li>
+					<li>Przygotuj masę śmietanową. Żelatynę zalej 1/4 szklanki zimnej wody. Gdy napęcznieje rozpuść w kąpieli wodnej, przestudź. Kremówkę ubij na sztywno z cukrem pudrem i wymieszaj delikatnie z rozpuszczoną żelatyną. Gotową masę wyłóż na wierzch ciasta. Wyrównaj powierzchnię długim nożem. Całość udekoruj sypkim cappuccino i odstaw na kilka godzin do lodówki.</li>
+				</ol>
+			</div>
+				
+			<div class="photo d-none" style="background-image: url(3.png);" id="p2c"></div>
+			<div class="ingr d-none" id="i2">
+				<h3>Składniki:</h3>
+				<ul>
+					<li>250g masła</li>
+					<li>65g mąki</li>
+					<li>65g cukru</li>
+					<li>3 jajka</li>
+					<li>500ml soku w zielonym kolorze</li>
+					<li>1 opak. budyniu waniliowego bez cukru</li>
+					<li>1 łyżka żelatyny</li>
+					<li>1 szklanka śmietanki 30%</li>
+					<li>1 opak. ciastek Delicje</li>
+					<li>1 opak. zielonej galaretki</li>
+					<li>2 dojrzałe kiwi</li>
+				</ul>
+			</div>
+			<div class="make d-none" id="m2">
+				<h3>Sposób wykonania:</h3>
+				<ol>
+					<li>Piekarnik nagrzewamy do 160°C. Całe jajka ubijamy z cukrem do uzyskania puszystej i białej masy. </li>
+					<li>Mąkę mieszamy z migdałami i delikatnie wsypując powoli ręcznie mieszamy z masą jajeczną. Przygotowaną masę wylewamy do tortownicy wyłożonej papierem do pieczenia i wkładamy do piekarnika na 20-30 minut . Po upieczeniu wystudzony biszkopt odwracamy do góry nogami i usuwamy papier z ciasta. </li>
+					<li>Miękką Kasię ucieramy mikserem, a następnie dodajemy stopniowo zielona masę. Miksujemy całość do połączenia składników. </li>
+					<li>Gdy nasza pianka jest już ścięta, zajmujemy się ostatnią warstwą. Galaretkę, która tężeje z kiwi przygotowujemy według zaleceń producenta . Zanim wylejemy tężejącą galaretkę to na piance układamy cienkie plastry kiwi. Wstawiamy ciasto do lodówki najlepiej na kilka godzin. Przed podaniem ciasto możemy udekorować posiekanymi orzeszkami pistacjowymi.</li>
+				</ol>
+			</div>
+			<div class="photo d-none" style="background-image: url(4.png);" id="p3c"></div>
+			<div class="ingr d-none" id="i3">
+				<h3>Składniki:</h3>
+				<ul>
+					<li>450g maki pszennej</li>
+					<li>250g masła</li>
+					<li>400g cukru</li>
+					<li>8 jajek</li>
+					<li>250ml wody</li>
+					<li>45g kakao</li>
+					<li>1l mleka</li>
+					<li>80g mąki ziemniaczanej</li>
+					<li>1 łyżka spirytusu</li>
+					<li>200g gorzkiej czekolady</li>
+					<li>150ml śmietany 30%</li>
+				</ul>
+			</div>
+			<div class="make d-none" id="m3">
+				<h3>Sposób wykonania:</h3>
+				<ol>
+					<li>Oddziel białka od żółtek. Z mąki odsyp trzy czubate łyżki. Kasię roztop w rondelku i wymieszaj z wodą. Żółtka zmiksuj z cukrem i cukrem wanilinowym na puch. Cały czas miksując, dodaj roztopioną Kasię z wodą i pozostałą mąkę.</li>
+					<li>Otrzymane ciasto podziel na dwie części. Do jednej dodaj odłożoną mąkę, do drugiej kakao. Wymieszaj. Białka ubij na sztywną pianę, podziel na pół i dodaj do każdej porcji ciasta, delikatnie mieszając.</li>
+					<li>Dwie szklanki mleka zagotuj z cukrem. Do pozostałego mleka wsyp mąkę i dokładnie roztrzep rózgą. Otrzymaną masę wlej do gotującego mleka i gotuj, ciągle mieszając, aż masa zgęstnieje. Zdejmij z ognia. Na powierzchni otrzymanej masy budyniowej połóż folię spożywczą (aby nie powstał kożuch) i odstaw do całkowitego wystygnięcia.</li>
+					<li>Ciasto polej przygotowaną polewą i odstaw w chłodne miejsce na kilka godzin. Schłodzone ciasto krój po skosie, tak by każdy kawałek obejmował przynajmniej trzy plastry.</li>
+					<div id="fake-contact"> </div>
+				</ol>
+			</div>
 		</div>
 		
-		<div class="photo2 photo"></div>
-		<div class="ingr2 ingr">
-			<h3>Składniki:</h3>
-			<ul>
-				<li>250g masła</li>
-				<li>65g mąki</li>
-				<li>65g cukru</li>
-				<li>3 jajka</li>
-				<li>500ml soku w zielonym kolorze</li>
-				<li>1 opak. budyniu waniliowego bez cukru</li>
-				<li>1 łyżka żelatyny</li>
-				<li>1 szklanka śmietanki 30%</li>
-				<li>1 opak. ciastek Delicje</li>
-				<li>1 opak. zielonej galaretki</li>
-				<li>2 dojrzałe kiwi</li>
-			</ul>
-		</div>
-		<div class="make2 make">
-			<h3>Sposób wykonania:</h3>
-			<ol>
-				<li>Piekarnik nagrzewamy do 160°C. Całe jajka ubijamy z cukrem do uzyskania puszystej i białej masy. </li>
-				<li>Mąkę mieszamy z migdałami i delikatnie wsypując powoli ręcznie mieszamy z masą jajeczną. Przygotowaną masę wylewamy do tortownicy wyłożonej papierem do pieczenia i wkładamy do piekarnika na 20-30 minut . Po upieczeniu wystudzony biszkopt odwracamy do góry nogami i usuwamy papier z ciasta. </li>
-				<li>Miękką Kasię ucieramy mikserem, a następnie dodajemy stopniowo zielona masę. Miksujemy całość do połączenia składników. </li>
-				<li>Gdy nasza pianka jest już ścięta, zajmujemy się ostatnią warstwą. Galaretkę, która tężeje z kiwi przygotowujemy według zaleceń producenta . Zanim wylejemy tężejącą galaretkę to na piance układamy cienkie plastry kiwi. Wstawiamy ciasto do lodówki najlepiej na kilka godzin. Przed podaniem ciasto możemy udekorować posiekanymi orzeszkami pistacjowymi.</li>
-			</ol>
-		</div>
-		
-		<div class="photo3 photo"></div>
-		<div class="ingr3 ingr">
-			<h3>Składniki:</h3>
-			<ul>
-				<li>450g maki pszennej</li>
-				<li>250g masła</li>
-				<li>400g cukru</li>
-				<li>8 jajek</li>
-				<li>250ml wody</li>
-				<li>45g kakao</li>
-				<li>1l mleka</li>
-				<li>80g mąki ziemniaczanej</li>
-				<li>1 łyżka spirytusu</li>
-				<li>200g gorzkiej czekolady</li>
-				<li>150ml śmietany 30%</li>
-			</ul>
-		</div>
-		<div class="make3 make">
-			<h3>Sposób wykonania:</h3>
-			<ol>
-				<li>Oddziel białka od żółtek. Z mąki odsyp trzy czubate łyżki. Kasię roztop w rondelku i wymieszaj z wodą. Żółtka zmiksuj z cukrem i cukrem wanilinowym na puch. Cały czas miksując, dodaj roztopioną Kasię z wodą i pozostałą mąkę.</li>
-				<li>Otrzymane ciasto podziel na dwie części. Do jednej dodaj odłożoną mąkę, do drugiej kakao. Wymieszaj. Białka ubij na sztywną pianę, podziel na pół i dodaj do każdej porcji ciasta, delikatnie mieszając.</li>
-				<li>Dwie szklanki mleka zagotuj z cukrem. Do pozostałego mleka wsyp mąkę i dokładnie roztrzep rózgą. Otrzymaną masę wlej do gotującego mleka i gotuj, ciągle mieszając, aż masa zgęstnieje. Zdejmij z ognia. Na powierzchni otrzymanej masy budyniowej połóż folię spożywczą (aby nie powstał kożuch) i odstaw do całkowitego wystygnięcia.</li>
-				<li>Ciasto polej przygotowaną polewą i odstaw w chłodne miejsce na kilka godzin. Schłodzone ciasto krój po skosie, tak by każdy kawałek obejmował przynajmniej trzy plastry.</li>
-				<div id="fake-contact"> </div>
-			</ol>
-		</div>
 
 		<div class="contact" id="con">
 			<form class="mail-container">
 				<div class="new-message"><h1>Nowa wiadomość</h1></div>
 				<div class="message-details-1"><h4>Imię:</h4></div>
-				<input type="text" name="" class="in1">
+				<input type="text" name="" class="in1 in">
 				<div class="message-details-2"><h4>Temat wiadomości:</h4></div>
-				<input type="text" name="" class="in2">
+				<input type="text" name="" class="in2 in">
 				<div class="message-details-3"><h4>Adres e-mail:</h4></div>
-				<input type="e-mail" name="e-mail" class="in3">
-				<div class="message-details-4"><h4>Treść wiadomości:</h4s></div>
-				<input type="text" name="" class="in4">
-				<div class="send-copy">
-			
-		</div>
-		<div class="send">
-			<input type="submit" name="button" value="Wyślij">
-		</div>
-	</form>
+				<input type="e-mail" name="e-mail" class="in3 in">
+				<div class="message-details-4"><h4>Treść wiadomości:</h4></div>
+				<input type="text" name="" class="in4 in ">
+				<div class="send-copy">	
+				</div>
+				<div class="send">
+				<input type="submit" name="button" value="Wyślij">
+				</div>
+			</form>
 		</div>
 		<footer>
 			<h4>Copyright superprzepisy.pl </h4>
 		</footer>
 	</div>
+	<script type="text/javascript" src="script.js"></script>
 </body>
 </html>

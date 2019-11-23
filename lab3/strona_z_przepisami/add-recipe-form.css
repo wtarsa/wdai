@@ -1,0 +1,84 @@
+@media screen and (min-width: 1210px){
+	.add-recipe-button{
+		display: flex;
+		justify-content: center;
+		position: fixed;
+		width: 10vw;
+		height: 5vh;
+		background-color: #a28a75;
+		top: 80vh;
+		border: 2px solid #a28a75;
+		border-radius: 5px;
+	}
+
+	.add-recipe-button:hover{
+		background-color: #edf0e9;
+	}
+
+	.add-recipe{
+		border-radius: 5px;
+		display: grid;
+		grid-template-rows: 10vh 10vh 20vh 20vh 10vh 10vh;
+		grid-template-columns: 1fr 1fr 1fr;
+		width: 80vw;
+		height: 80vh;
+		left: 10vw;
+		top: 10vh;
+	    background-color: #edf0e9;
+	    border: 2px solid #a28a75;
+	    position: fixed;
+		grid-gap: 4px;
+	}
+
+	.ar1, .tf, .if{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin:  4px;
+	}
+
+	.ar1{
+		grid-area: 1/1/2/4;
+	}
+	.tf1{
+		grid-area: 2/1/3/2;
+	}
+	.if1{
+		grid-area: 2/2/3/4;
+	}
+	.tf2{
+		grid-area: 3/1/4/2;
+	}
+	.if2{
+		grid-area: 3/2/4/4;
+	}
+	.tf3{
+		grid-area: 4/1/5/2;
+	}
+	.if3{
+		grid-area: 4/2/5/4;
+	}
+	.tf4{
+		grid-area: 5/1/6/3;
+	}
+	.if4{
+		position: relative;
+		left: 5vw;
+		top: 1vh;
+		grid-area: 5/3/6/4;
+		width: 15vw;
+		height: 5vh;
+	}
+	.if5{
+		position: relative;
+		left: 5vw;
+		top: 1vh;
+		grid-area: 6/2/7/3;
+		width: 15vw;
+		height: 5vh;
+	}
+	.d-none{
+		display: none;
+	}
+
+}
