@@ -14,39 +14,18 @@
 		</div>
 	</div>
 	<button id="ssp">StopStratPropagation</button>
-	<button>RemoveListener</button>
+	<button id="rm">RemoveListener</button>
 	<button>AddListener</button>
+	<div class="dropdown">
+  		<button onclick="myFunction()" class="dropbtn">Dropdown</button>
+  		<div id="myDropdown" class="dropdown-content">
+    		<a id="c1"></a>
+    		<a id="c2"></a>
+    		<a id="c3"></a>
+  		</div>
+	</div> 
 
-	<script type="text/javascript">
-
-		var counter1 = 0;
-		var counter2 = 0;
-		var counter3 = 0;
-
-		var a = document.getElementById('blok1').onclick = function(){			
-			alert('Nacisnąłeś niebieski o wartości 1');
-			counter1++;
-		}
-
-		document.getElementById('blok2').onclick = function(){
-			if(counter2 < 30){
-				alert('Nacisnąłeś czerwony o wartości 2');
-				counter2++;
-			}
-		}
-
-		document.getElementById('blok3').onclick = function(){
-			if(counter3 < 50){
-				alert('Nacisnąłeś żółty o wartości 5');
-				counter3++;
-			}
-		}
-
-		var sspButton = document.getElementById('ssp');
-		sspButton.AddListener('click', a);
-		sspButton.RemoveListener('click', a, false);
-
-	</script>
+	<script type="text/javascript" src="script.js"></script>
 
 </body>
 </html>
