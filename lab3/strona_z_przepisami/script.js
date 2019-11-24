@@ -93,6 +93,10 @@ function readURL(input) {
    			var ingr = document.createElement("div");
            	ingr.setAttribute('class', 'ingr d-none');
             ingr.setAttribute('id', 'i'+pid);
+            var recipeName = document.querySelector('.recipe-name').value;
+            var rn = document.createElement("h3");
+            rn.innerHTML = recipeName;
+            ingr.appendChild(rn);
             var s = document.createElement("h3");
             s.innerHTML = "Składniki:";
             ingr.appendChild(s);
