@@ -9,6 +9,8 @@ document.getElementById('p1c').addEventListener('click', hideAllRecipes);
 document.getElementById('p2c').addEventListener('click', hideAllRecipes);
 document.getElementById('p3c').addEventListener('click', hideAllRecipes);
 
+var emptyDiv = document.getElementById("rec");
+
 var recipe_form = document.getElementById('recipe_form');
 var add_recipe_button = document.getElementById('add-recipe-button');
 var recipe_submit_button = document.querySelector('.submit-form')
@@ -45,9 +47,10 @@ function hideAllRecipes(){
 function showRecipe(event){
 	hideAllRecipes();
 	var a = event.target.getAttribute('photo_id')
-	document.getElementById("p" + a + "c").setAttribute("class", "photo hvr-wobble-to-top-right");
-	document.getElementById("i" + a).setAttribute("class", "ingr hvr-wobble-to-top-right");
-	document.getElementById("m" + a).setAttribute("class", "make hvr-wobble-to-top-right");
+	document.getElementById("p" + a + "c").setAttribute("class", "photo");
+	document.getElementById("i" + a).setAttribute("class", "ingr");
+	document.getElementById("m" + a).setAttribute("class", "make");
+	rec.scrollIntoView();
 }
 
 function showAddRecipeForm(event){

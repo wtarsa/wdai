@@ -1,5 +1,9 @@
 @media screen and (min-width: 1210px){
 
+html {
+  scroll-behavior: smooth;
+}
+
 body{
 	max-width: 100%;
 	margin: 0px 10px 10px 10px;
@@ -133,7 +137,7 @@ header{
 }
 
 .recipe-box-recipes{
-	grid-area: 4/1/5/4;
+	grid-area: 5/1/6/4;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -163,17 +167,17 @@ header{
 .ingr p, .make p{
 	padding: 6vh;
 }
-
-.photo:hover{
-	opacity: 0.5;
+.empty {
+	height: 6vh;
+	grid-area: 4/1/5/4;
 }
 
 .contact{
-	grid-area: 5/1/6/4;
+	grid-area: 6/1/7/4;
 }
 
 footer{
-	grid-area: 6/1/7/4;
+	grid-area: 7/1/8/4;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -245,17 +249,6 @@ footer{
 }
 .d-none{
 	display: none;
-}
-
-[class^="hvr-"] {
-    margin: .4em;
-    padding: 1em;
-    cursor: pointer;
-    background: #e1e1e1;
-    text-decoration: none;
-    color: #666;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-    -webkit-font-smoothing: antialiased;
 }
 
 }
