@@ -47,9 +47,9 @@ function hideAllRecipes(){
 function showRecipe(event){
 	hideAllRecipes();
 	var a = event.target.getAttribute('photo_id')
-	document.getElementById("p" + a + "c").setAttribute("class", "photo");
-	document.getElementById("i" + a).setAttribute("class", "ingr");
-	document.getElementById("m" + a).setAttribute("class", "make");
+	document.getElementById("p" + a + "c").setAttribute("class", "photo hvr-float-shadow");
+	document.getElementById("i" + a).setAttribute("class", "ingr hvr-float-shadow");
+	document.getElementById("m" + a).setAttribute("class", "make hvr-float-shadow");
 	rec.scrollIntoView();
 }
 

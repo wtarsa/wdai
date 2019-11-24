@@ -9,6 +9,7 @@
 		top: 80vh;
 		border: 2px solid #a28a75;
 		border-radius: 5px;
+		z-index: 1;
 	}
 
 	.add-recipe-button:hover{
@@ -93,6 +94,7 @@
 		top: 80vh;
 		border: 2px solid #a28a75;
 		border-radius: 5px;
+		z-index: 1;
 	}
 
 	.add-recipe-button:hover{

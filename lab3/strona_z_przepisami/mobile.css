@@ -53,6 +53,9 @@ header ul li{
 	font-size: 2vw;
 }
 
+.ff{
+	margin-top: 0;
+}
 
 .container{
 	display: grid;
@@ -91,7 +94,7 @@ nav{
 	margin: 0px 10px 0px 10px;
 	left: 0px;
 	right: 0px;
-
+	z-index: 1;
 	
 }
 
