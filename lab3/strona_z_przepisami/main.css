@@ -15,7 +15,7 @@ body{
 h1, h3, h4, a, .footer, li, h2, input, p, div, h5{
 	font-family: 'monospace';
 	text-decoration: none;
-	font-size: 1.5vmin;
+	font-size: 1.2vmin;
 	color: #3c3947;
 }
 
@@ -28,19 +28,19 @@ h2 {
 }
 
 h3 {
-  font-size: 4.5vmin; 
-}
-
-h4 {
   font-size: 3.5vmin; 
 }
 
-h5 {
+h4 {
   font-size: 3vmin; 
 }
 
-h6 {
+h5 {
   font-size: 2.5vmin; 
+}
+
+h6 {
+  font-size: 2vmin; 
 }
 
 .container{
@@ -146,13 +146,13 @@ header{
 }
 
 .photo, .ingr, .make{
-	width: 31vw;
+	max-width: 28vw;
 	margin-top: 4px;
 	margin-bottom: 4px;
 }
 
 .photo{
-	min-height: 25vh;
+	min-height: 20vh;
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: contain;
